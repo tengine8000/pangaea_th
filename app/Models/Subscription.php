@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Subscriber;
 
 class Subscription extends Model
 {
@@ -18,4 +19,12 @@ class Subscription extends Model
         'subscriber_id',
         'topic_id',
     ];
+
+    /**
+     * Get the subscriber that owns the subscription.
+     */
+    public function subscriber()
+    {
+        return $this->belongsTo(Subscriber::class);
+    }
 }

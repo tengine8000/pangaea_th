@@ -3,8 +3,15 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "url": "http://localhost:9000"
+    "url": "http://localhost:8005"
 }
 
 ###
+POST http://127.0.0.1:8000/api/publish/TopiC1
+Accept: application/json
+Content-Type: application/json
 
+{
+    "News": "It's Christmas Holiday season!",
+    "Sports": "Messi vs Ronaldo"
+}
