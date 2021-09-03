@@ -1,0 +1,7 @@
+GET http://127.0.0.1:8000/api/subscribe/topic1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "url": "http://localhost:9000"
+}
