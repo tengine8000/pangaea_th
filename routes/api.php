@@ -15,4 +15,4 @@ use App\Http\Controllers\SubscriberController;
 |
 */
 
-Route::get('/subscribe/{topic}', [SubscriberController::class, 'subscribe']);
+Route::post('/subscribe/{topic}', [SubscriberController::class, 'subscribe']);
