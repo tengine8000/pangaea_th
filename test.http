@@ -1,17 +1,35 @@
-POST http://127.0.0.1:8000/api/subscribe/topic1
+POST http://127.0.0.1:8000/api/subscribe/money
 Accept: application/json
 Content-Type: application/json
 
 {
-    "url": "http://localhost:8005"
+    "url": "http://localhost:9005"
 }
 
 ###
-POST http://127.0.0.1:8000/api/publish/TopiC1
+POST http://127.0.0.1:8000/api/publish/money
 Accept: application/json
 Content-Type: application/json
 
 {
     "News": "It's Christmas Holiday season!",
     "Sports": "Messi vs Ronaldo"
+}
+
+###
+POST http://127.0.0.1:8000/api/unsubscribe/money
+Accept: application/json
+Content-Type: application/json
+
+{
+    "url": "http://localhost:9005"
+}
+
+###
+POST http://127.0.0.1:8000/api/unsubscribeAll
+Accept: application/json
+Content-Type: application/json
+
+{
+    "url": "http://localhost:9005"
 }

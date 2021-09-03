@@ -33,6 +33,8 @@ class PublisherController extends Controller
                 Log::error($e->getMessage());
             } catch (\Illuminate\Http\Client\ConnectionException $e) {
                 Log::error($e->getMessage());
+            } catch (\Exception $e) {
+                Log::error($e->getMessage());
             }
             return $subscription->subscriber->url;
         });

@@ -17,6 +17,8 @@ use App\Http\Controllers\PublisherController;
 */
 
 Route::post('/subscribe/{topic}', [SubscriberController::class, 'subscribe']);
+Route::post('/unsubscribe/{topic}', [SubscriberController::class, 'unsubscribe']);
+Route::post('/unsubscribeAll', [SubscriberController::class, 'unsubscribeAll']);
 Route::post('/publish/{topic}', [PublisherController::class, 'publish']);
 Route::post('/', function(Request $request){
     $out = new \Symfony\Component\Console\Output\ConsoleOutput();
